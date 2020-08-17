@@ -1,0 +1,134 @@
+.chat-container{ 
+    display: flex;  
+    position: fixed;
+    bottom: 0;
+    right: 44px;
+
+    
+
+   .select-user{    
+    height: auto;
+    width: 200px;    
+    background-color: #fff;
+    border:1px solid #2C65C8;
+    border-radius: 15px 15px 0 0;
+    transition: 0.3s ease-in-out;
+    
+
+      .header{
+         background-color: #2C65C8;
+         color: #fff;
+         padding: 10px 10px;
+         border-radius: 14px 14px 0 0;
+         align-items: center;
+         cursor: pointer;
+      }
+
+      .users-list{
+         height: 300px;
+         overflow-y: scroll;
+         padding: 0 15px;       
+
+         .avatar{
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+         }
+         p{
+            font-size: 12px;
+            padding-left: 10px !important;
+         }
+      }
+
+   }
+
+}
+
+.chat-room{
+
+   position: fixed;
+   bottom: 0;
+   right: 260px;
+   height: auto;
+   width: 200px;
+   background-color: #fff;
+   border:1px solid #2C65C8;
+   border-radius: 16px 16px 0 0;
+
+   .header{
+      background-color: #2C65C8;
+      color: #fff;
+      padding: 10px 10px;
+      border-radius: 14px 14px 0 0;
+      align-items: center;
+      cursor: pointer;
+
+
+
+      .avatar{
+         height: 30px;
+         width: 30px;
+         border-radius: 50%;
+      }
+
+      p{
+         padding-left: 0.5em !important;
+         font-size: 13px;
+      }
+
+      .close{
+         color: #fff;
+         font-size: 12px;
+      }
+   }
+
+   .body{
+
+      position: relative;
+      height: 150px;
+      overflow-y: scroll;
+
+      .messages-container{
+
+         height: 180px;
+
+         .messages-list{
+            
+            font-size: 13px;
+            position: absolute;
+            bottom: 0;
+            right: 0px;
+            margin: 0;
+
+            .message{
+               padding: 1px 5px;
+               background-color: #d8d8d8;
+               border-radius: 0 0 0 7px;
+               margin: 2px 0;
+            }
+         }
+
+      }
+      
+
+   }
+
+   .footer{
+      height: 40px;
+
+      .form{
+         display: flex;
+         position: absolute;
+         bottom: 0;
+
+         .form-control{
+            border-radius: 0;
+         }
+
+         .btn{
+            border-top: 1px solid lightgray;
+            border-radius: 0;
+         }
+      }
+   }
+}

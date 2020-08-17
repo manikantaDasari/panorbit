@@ -1,0 +1,66 @@
+.dropdown-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 310px;
+    width: 235px;
+    border-radius: 30px;
+    position: absolute;
+    text-align: center;
+    right: 0;
+    z-index: 999;
+    background-color: #fff;
+    box-shadow: 0px 2px 50px #0000001a;
+      
+
+
+    .current-user{
+         text-align: center;
+      .avatar{
+         background-repeat: no-repeat;
+         background-position: center;
+         background-size: cover;
+         height: 75px;
+         width: 75px;
+         border-radius: 50%;
+         margin: 0 auto;    
+      }
+  
+      h5{
+         color:#4A4A4A;
+      }
+       
+    }
+
+    
+   
+    .all-users{
+      height: 75px;
+      overflow-y: scroll;
+      padding: 0 15px;
+
+      li{
+         padding: 8px 0;         
+         justify-content: center;
+
+         .avatar{
+            height: 35px;
+            width: 35px;
+            border-radius: 50%;
+            margin-right: 5px;
+         }
+         p{
+            font-size: 13px;
+         }
+      }
+      
+    }
+
+    .signout{
+      background: #D55151;
+      border-radius: 25px;
+      color: #fff;
+      margin-top: 10px;
+    }
+
+}

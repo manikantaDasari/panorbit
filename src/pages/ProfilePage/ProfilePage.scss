@@ -1,0 +1,66 @@
+.left-container{
+
+   text-align: center;   
+   margin-top: 10px;
+   padding-top: 10px;
+   position: relative;
+
+    &::after{
+         content: ''; 
+         width: 1px; 
+         height: 100%; 
+         position: absolute;
+         top: 0;
+         right: -25px;         
+         border: 1px solid #efefef;
+         
+    }
+
+      .profile-bio{
+
+         .avatar{
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 200px;
+            width: 200px;
+            border-radius: 125px;
+            margin: 0 auto;
+         }
+
+         h3{
+            font-size: 24px;
+            color: #545454;
+            padding: 3px;
+         }
+         
+      }
+
+      .divider{
+         border: 1px solid #efefef;
+         width: 100%;
+      }
+      
+
+   }
+
+   .sub{
+      font-size: 24px;
+      color: #9A9A9A;
+   }
+
+.right-container{
+   padding: 1em 3em;
+
+   ul{
+      width: 75%;
+   }
+
+   .location-container{
+      height: 300px;
+      width: 100%;      
+      border-radius: 20px;
+      overflow: hidden;
+      background-color: #efefef;
+   }
+}

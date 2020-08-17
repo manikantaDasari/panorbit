@@ -1,26 +1,56 @@
 import React from 'react';
-import logo from './logo.svg';
+import {Switch,Route} from "react-router-dom";
+import {connect} from 'react-redux'
+import {selectCurrentUser} from './Redux/users/user-selector';
+import{createStructuredSelector}from 'reselect';
+
+// layouts
+import TheLayout  from './Layouts/Thelayout/TheLayout';
+import LandingPage from './pages/Landingpage/Landingpage'
+// css
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component{
+  
+  render(){
+    const{currentUser} = this.props
+    return(
+      <div className='App'>
+          <Switch>
+            {
+              currentUser?
+              (
+                <Route path="/" render={() => <TheLayout currentUser={currentUser} />} />
+              ) : (
+                <Route exact path="/" render={() => <LandingPage/>} />
+              )
+            }
+
+            {
+              currentUser?
+              (
+                <Route path='*'>
+                <h1>404 Error</h1>
+                </Route>
+              ) : (
+                <Route exact path="*" render={() => <LandingPage handleUser={this.handleUser}/>} />
+              )
+            } 
+                         
+          </Switch>
+
+
+
+
+
+      </div>
+    )
+  }
 }
 
-export default App;
+
+const mapStateToProps = createStructuredSelector({
+  currentUser:  selectCurrentUser
+})
+
+export default connect(mapStateToProps)(App);

@@ -1,0 +1,5 @@
+export const chatActionsTypes={
+   SET_CHAT_USER: 'SET_CHAT_USER',
+   SEND_MESSAGE: 'SEND_MESSAGE',
+   CLEAR_CHAT_ROOM:'CLEAR_CHAT_ROOM'   
+}
